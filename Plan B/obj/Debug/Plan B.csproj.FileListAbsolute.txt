@@ -1,0 +1,13 @@
+C:\Users\MAX\RiderProjects\Plan B\bin\Debug\Plan_B.exe.config
+C:\Users\MAX\RiderProjects\Plan B\bin\Debug\Plan_B.exe
+C:\Users\MAX\RiderProjects\Plan B\bin\Debug\Plan_B.pdb
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan B.csprojAssemblyReference.cache
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.Properties.Resources.resources
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan B.csproj.GenerateResource.cache
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan B.csproj.CoreCompileInputs.cache
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.exe
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.pdb
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.Form1.resources
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.Scoreboard.resources
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.Game.resources
+C:\Users\MAX\RiderProjects\Plan B\obj\Debug\Plan_B.User.resources
