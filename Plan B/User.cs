@@ -23,8 +23,9 @@ namespace Plan_B
             {
                 //verificacion con la base de datos por si esta repetido
                 
-                //luego se inicia el juego
                 
+                
+                //luego se inicia el juego
                 Game game = new Game();
                 game.Show();
                 this.Close();

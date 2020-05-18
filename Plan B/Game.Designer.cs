@@ -31,12 +31,10 @@ namespace Plan_B
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources =
                 new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -104,7 +102,10 @@ namespace Plan_B
             this.pictureBox65 = new System.Windows.Forms.PictureBox();
             this.pictureBox66 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            this.Hearts1 = new System.Windows.Forms.PictureBox();
+            this.Hearts2 = new System.Windows.Forms.PictureBox();
+            this.Hearts3 = new System.Windows.Forms.PictureBox();
+            this.imageListHearts = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
@@ -170,6 +171,9 @@ namespace Plan_B
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox65)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox66)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Hearts1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Hearts2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Hearts3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -179,41 +183,6 @@ namespace Plan_B
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1123, 77);
             this.label1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Minecraft Evenings", 21.75F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(90, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 35);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "x";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Minecraft Evenings", 36F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.Location = new System.Drawing.Point(117, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 57);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -954,6 +923,46 @@ namespace Plan_B
             this.pictureBox10.TabIndex = 82;
             this.pictureBox10.TabStop = false;
             // 
+            // Hearts1
+            // 
+            this.Hearts1.BackColor = System.Drawing.SystemColors.Control;
+            this.Hearts1.Location = new System.Drawing.Point(0, 0);
+            this.Hearts1.Name = "Hearts1";
+            this.Hearts1.Size = new System.Drawing.Size(84, 76);
+            this.Hearts1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hearts1.TabIndex = 1;
+            this.Hearts1.TabStop = false;
+            this.Hearts1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Hearts2
+            // 
+            this.Hearts2.BackColor = System.Drawing.SystemColors.Control;
+            this.Hearts2.Location = new System.Drawing.Point(80, -1);
+            this.Hearts2.Name = "Hearts2";
+            this.Hearts2.Size = new System.Drawing.Size(84, 76);
+            this.Hearts2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hearts2.TabIndex = 83;
+            this.Hearts2.TabStop = false;
+            // 
+            // Hearts3
+            // 
+            this.Hearts3.BackColor = System.Drawing.SystemColors.Control;
+            this.Hearts3.Location = new System.Drawing.Point(161, 0);
+            this.Hearts3.Name = "Hearts3";
+            this.Hearts3.Size = new System.Drawing.Size(84, 76);
+            this.Hearts3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hearts3.TabIndex = 84;
+            this.Hearts3.TabStop = false;
+            this.Hearts3.Click += new System.EventHandler(this.pictureBox67_Click);
+            // 
+            // imageListHearts
+            // 
+            this.imageListHearts.ImageStream =
+                ((System.Windows.Forms.ImageListStreamer) (resources.GetObject("imageListHearts.ImageStream")));
+            this.imageListHearts.TransparentColor = System.Drawing.Color.Black;
+            this.imageListHearts.Images.SetKeyName(0, "Heart.png");
+            this.imageListHearts.Images.SetKeyName(1, "Heart - Empty.png");
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -961,6 +970,8 @@ namespace Plan_B
             this.BackColor = System.Drawing.Color.Chartreuse;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1018, 734);
+            this.Controls.Add(this.Hearts3);
+            this.Controls.Add(this.Hearts2);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox66);
             this.Controls.Add(this.pictureBox65);
@@ -1028,15 +1039,12 @@ namespace Plan_B
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Hearts1);
             this.Controls.Add(this.label1);
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.Load += new System.EventHandler(this.Game_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
@@ -1102,15 +1110,15 @@ namespace Plan_B
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox65)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox66)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Hearts1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Hearts2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Hearts3)).EndInit();
             this.ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1178,5 +1186,9 @@ namespace Plan_B
         private System.Windows.Forms.PictureBox pictureBox40;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox picPlayer;
+        private System.Windows.Forms.ImageList imageListHearts;
+        private System.Windows.Forms.PictureBox Hearts2;
+        private System.Windows.Forms.PictureBox Hearts3;
+        private System.Windows.Forms.PictureBox Hearts1;
     }
 }
