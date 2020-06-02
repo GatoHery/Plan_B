@@ -52,7 +52,7 @@
             // 
             this.btnScoreboard.Font = new System.Drawing.Font("Minecraft Evenings", 18F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnScoreboard.Location = new System.Drawing.Point(249, 302);
+            this.btnScoreboard.Location = new System.Drawing.Point(248, 302);
             this.btnScoreboard.Name = "btnScoreboard";
             this.btnScoreboard.Size = new System.Drawing.Size(211, 51);
             this.btnScoreboard.TabIndex = 1;
@@ -81,6 +81,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnScoreboard);
             this.Controls.Add(this.btnPlay);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(726, 525);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Plan_B
 {
     public partial class User : Form
     {
+        private bool Continue = true;
         public User()
         {
             InitializeComponent();
@@ -22,13 +24,30 @@ namespace Plan_B
             else
             {
                 //verificacion con la base de datos por si esta repetido
-                
-                
-                
+                var dt = ConecctionDB.ExecuteQuery("SELECT Name " +
+                                                             "FROM PLAYER");
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr[0].ToString().Equals(txtName.Text))
+                    {
+                        MessageBox.Show("The name already exist", "name repeated",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        Continue = false;
+                        break;
+                    }
+                }
+
                 //luego se inicia el juego
-                Game game = new Game();
-                game.Show();
-                this.Close();
+                if (Continue == true)
+                {
+                    ConecctionDB.ExecuteNonQuery("INSERT INTO PLAYER(Name) " +
+                                                 $"VALUES('{txtName.Text}')");
+                    Game game = new Game();
+                    game.Show();
+                    this.Close();
+                }
             }
             
         }

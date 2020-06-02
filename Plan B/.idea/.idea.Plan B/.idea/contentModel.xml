@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\MAX\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\MAX\.Rider2019.3\config\extensions" t="IncludeRecursive" />
     <e p="C:\Users\MAX\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\MAX\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Plan B.-600308662.00" t="ExcludeRecursive" />
     <e p="C:\Users\MAX\Documents\GitHub\Plan_B\Plan B" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="ConecctionDB.cs" t="Include" />
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />
@@ -14,6 +17,7 @@
       <e p="Game.resx" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
       <e p="Plan B.csproj" t="IncludeRecursive" />
       <e p="Plan B.sln" t="IncludeFlat" />
       <e p="Program.cs" t="Include" />

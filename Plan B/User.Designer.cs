@@ -79,7 +79,7 @@ namespace Plan_B
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button2.Location = new System.Drawing.Point(21, 447);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 46);
+            this.button2.Size = new System.Drawing.Size(108, 46);
             this.button2.TabIndex = 2;
             this.button2.Text = "Return";
             this.button2.UseVisualStyleBackColor = true;
@@ -95,6 +95,7 @@ namespace Plan_B
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(641, 558);
             this.Name = "User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
