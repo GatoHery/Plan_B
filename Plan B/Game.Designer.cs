@@ -106,6 +106,7 @@ namespace Plan_B
             this.Hearts2 = new System.Windows.Forms.PictureBox();
             this.Hearts3 = new System.Windows.Forms.PictureBox();
             this.imageListHearts = new System.Windows.Forms.ImageList(this.components);
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
@@ -178,7 +179,7 @@ namespace Plan_B
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(0, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1123, 77);
@@ -186,9 +187,10 @@ namespace Plan_B
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Minecraft Evenings", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(702, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 61);
@@ -198,9 +200,10 @@ namespace Plan_B
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Minecraft Evenings", 21.75F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(884, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 45);
@@ -218,6 +221,7 @@ namespace Plan_B
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "pieces";
             // 
             // pictureBox3
             // 
@@ -229,6 +233,7 @@ namespace Plan_B
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "pieces";
             // 
             // pictureBox4
             // 
@@ -240,6 +245,7 @@ namespace Plan_B
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "pieces";
             // 
             // pictureBox7
             // 
@@ -251,6 +257,7 @@ namespace Plan_B
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 11;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "pieces";
             // 
             // pictureBox8
             // 
@@ -262,6 +269,7 @@ namespace Plan_B
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "pieces";
             // 
             // pictureBox6
             // 
@@ -273,12 +281,13 @@ namespace Plan_B
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "pieces";
             // 
             // picPlayer
             // 
             this.picPlayer.BackColor = System.Drawing.SystemColors.Control;
             this.picPlayer.Image = ((System.Drawing.Image) (resources.GetObject("picPlayer.Image")));
-            this.picPlayer.Location = new System.Drawing.Point(462, 658);
+            this.picPlayer.Location = new System.Drawing.Point(462, 677);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(118, 45);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,7 +298,7 @@ namespace Plan_B
             // 
             this.pictureBox11.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox11.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(500, 633);
+            this.pictureBox11.Location = new System.Drawing.Point(498, 652);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(41, 37);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,6 +315,7 @@ namespace Plan_B
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 20;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "pieces";
             // 
             // pictureBox14
             // 
@@ -317,6 +327,7 @@ namespace Plan_B
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 21;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Tag = "pieces";
             // 
             // pictureBox15
             // 
@@ -328,6 +339,7 @@ namespace Plan_B
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 22;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Tag = "pieces";
             // 
             // pictureBox16
             // 
@@ -339,6 +351,7 @@ namespace Plan_B
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 23;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Tag = "pieces";
             // 
             // pictureBox17
             // 
@@ -350,6 +363,7 @@ namespace Plan_B
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 24;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Tag = "pieces";
             // 
             // pictureBox18
             // 
@@ -361,6 +375,7 @@ namespace Plan_B
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 25;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "pieces";
             // 
             // pictureBox5
             // 
@@ -372,6 +387,7 @@ namespace Plan_B
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "pieces";
             // 
             // pictureBox19
             // 
@@ -383,6 +399,7 @@ namespace Plan_B
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 27;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.Tag = "pieces";
             // 
             // pictureBox20
             // 
@@ -394,6 +411,7 @@ namespace Plan_B
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 28;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Tag = "pieces";
             // 
             // pictureBox21
             // 
@@ -405,6 +423,7 @@ namespace Plan_B
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 29;
             this.pictureBox21.TabStop = false;
+            this.pictureBox21.Tag = "pieces";
             // 
             // pictureBox22
             // 
@@ -416,6 +435,7 @@ namespace Plan_B
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 30;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.Tag = "pieces";
             // 
             // pictureBox23
             // 
@@ -427,6 +447,7 @@ namespace Plan_B
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 31;
             this.pictureBox23.TabStop = false;
+            this.pictureBox23.Tag = "pieces";
             // 
             // pictureBox24
             // 
@@ -449,6 +470,7 @@ namespace Plan_B
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 33;
             this.pictureBox25.TabStop = false;
+            this.pictureBox25.Tag = "pieces";
             // 
             // pictureBox26
             // 
@@ -460,6 +482,7 @@ namespace Plan_B
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 34;
             this.pictureBox26.TabStop = false;
+            this.pictureBox26.Tag = "pieces";
             // 
             // pictureBox27
             // 
@@ -471,6 +494,7 @@ namespace Plan_B
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 35;
             this.pictureBox27.TabStop = false;
+            this.pictureBox27.Tag = "pieces";
             // 
             // pictureBox29
             // 
@@ -482,6 +506,7 @@ namespace Plan_B
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox29.TabIndex = 37;
             this.pictureBox29.TabStop = false;
+            this.pictureBox29.Tag = "pieces";
             // 
             // pictureBox28
             // 
@@ -493,6 +518,7 @@ namespace Plan_B
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 38;
             this.pictureBox28.TabStop = false;
+            this.pictureBox28.Tag = "pieces";
             // 
             // pictureBox30
             // 
@@ -504,6 +530,7 @@ namespace Plan_B
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 39;
             this.pictureBox30.TabStop = false;
+            this.pictureBox30.Tag = "pieces";
             // 
             // pictureBox31
             // 
@@ -515,6 +542,7 @@ namespace Plan_B
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 40;
             this.pictureBox31.TabStop = false;
+            this.pictureBox31.Tag = "pieces";
             // 
             // pictureBox32
             // 
@@ -526,6 +554,7 @@ namespace Plan_B
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 41;
             this.pictureBox32.TabStop = false;
+            this.pictureBox32.Tag = "pieces";
             // 
             // pictureBox33
             // 
@@ -537,6 +566,7 @@ namespace Plan_B
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox33.TabIndex = 42;
             this.pictureBox33.TabStop = false;
+            this.pictureBox33.Tag = "pieces";
             // 
             // pictureBox34
             // 
@@ -548,6 +578,7 @@ namespace Plan_B
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 43;
             this.pictureBox34.TabStop = false;
+            this.pictureBox34.Tag = "pieces";
             // 
             // pictureBox35
             // 
@@ -559,6 +590,7 @@ namespace Plan_B
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox35.TabIndex = 44;
             this.pictureBox35.TabStop = false;
+            this.pictureBox35.Tag = "pieces";
             // 
             // pictureBox36
             // 
@@ -570,6 +602,7 @@ namespace Plan_B
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 45;
             this.pictureBox36.TabStop = false;
+            this.pictureBox36.Tag = "pieces";
             // 
             // pictureBox37
             // 
@@ -581,6 +614,7 @@ namespace Plan_B
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox37.TabIndex = 46;
             this.pictureBox37.TabStop = false;
+            this.pictureBox37.Tag = "pieces";
             // 
             // pictureBox38
             // 
@@ -592,6 +626,7 @@ namespace Plan_B
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox38.TabIndex = 47;
             this.pictureBox38.TabStop = false;
+            this.pictureBox38.Tag = "pieces";
             // 
             // pictureBox39
             // 
@@ -603,6 +638,7 @@ namespace Plan_B
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox39.TabIndex = 48;
             this.pictureBox39.TabStop = false;
+            this.pictureBox39.Tag = "pieces";
             // 
             // pictureBox41
             // 
@@ -614,6 +650,7 @@ namespace Plan_B
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox41.TabIndex = 50;
             this.pictureBox41.TabStop = false;
+            this.pictureBox41.Tag = "pieces";
             // 
             // pictureBox43
             // 
@@ -625,6 +662,7 @@ namespace Plan_B
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox43.TabIndex = 52;
             this.pictureBox43.TabStop = false;
+            this.pictureBox43.Tag = "pieces";
             // 
             // pictureBox44
             // 
@@ -636,6 +674,7 @@ namespace Plan_B
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox44.TabIndex = 53;
             this.pictureBox44.TabStop = false;
+            this.pictureBox44.Tag = "pieces";
             // 
             // pictureBox45
             // 
@@ -647,6 +686,7 @@ namespace Plan_B
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox45.TabIndex = 54;
             this.pictureBox45.TabStop = false;
+            this.pictureBox45.Tag = "pieces";
             // 
             // pictureBox42
             // 
@@ -658,6 +698,7 @@ namespace Plan_B
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox42.TabIndex = 55;
             this.pictureBox42.TabStop = false;
+            this.pictureBox42.Tag = "pieces";
             // 
             // pictureBox48
             // 
@@ -669,6 +710,7 @@ namespace Plan_B
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox48.TabIndex = 58;
             this.pictureBox48.TabStop = false;
+            this.pictureBox48.Tag = "pieces";
             // 
             // pictureBox50
             // 
@@ -680,6 +722,7 @@ namespace Plan_B
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox50.TabIndex = 60;
             this.pictureBox50.TabStop = false;
+            this.pictureBox50.Tag = "pieces";
             // 
             // pictureBox51
             // 
@@ -691,6 +734,7 @@ namespace Plan_B
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox51.TabIndex = 61;
             this.pictureBox51.TabStop = false;
+            this.pictureBox51.Tag = "pieces";
             // 
             // pictureBox52
             // 
@@ -702,6 +746,7 @@ namespace Plan_B
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox52.TabIndex = 62;
             this.pictureBox52.TabStop = false;
+            this.pictureBox52.Tag = "pieces";
             // 
             // pictureBox53
             // 
@@ -713,6 +758,7 @@ namespace Plan_B
             this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox53.TabIndex = 63;
             this.pictureBox53.TabStop = false;
+            this.pictureBox53.Tag = "pieces";
             // 
             // pictureBox54
             // 
@@ -724,6 +770,7 @@ namespace Plan_B
             this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox54.TabIndex = 64;
             this.pictureBox54.TabStop = false;
+            this.pictureBox54.Tag = "pieces";
             // 
             // pictureBox55
             // 
@@ -735,6 +782,7 @@ namespace Plan_B
             this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox55.TabIndex = 65;
             this.pictureBox55.TabStop = false;
+            this.pictureBox55.Tag = "pieces";
             // 
             // pictureBox56
             // 
@@ -746,6 +794,7 @@ namespace Plan_B
             this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox56.TabIndex = 66;
             this.pictureBox56.TabStop = false;
+            this.pictureBox56.Tag = "pieces";
             // 
             // pictureBox57
             // 
@@ -757,6 +806,7 @@ namespace Plan_B
             this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox57.TabIndex = 67;
             this.pictureBox57.TabStop = false;
+            this.pictureBox57.Tag = "pieces";
             // 
             // pictureBox58
             // 
@@ -768,6 +818,7 @@ namespace Plan_B
             this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox58.TabIndex = 68;
             this.pictureBox58.TabStop = false;
+            this.pictureBox58.Tag = "pieces";
             // 
             // pictureBox59
             // 
@@ -779,6 +830,7 @@ namespace Plan_B
             this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox59.TabIndex = 69;
             this.pictureBox59.TabStop = false;
+            this.pictureBox59.Tag = "pieces";
             // 
             // pictureBox60
             // 
@@ -790,6 +842,7 @@ namespace Plan_B
             this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox60.TabIndex = 70;
             this.pictureBox60.TabStop = false;
+            this.pictureBox60.Tag = "pieces";
             // 
             // pictureBox61
             // 
@@ -801,6 +854,7 @@ namespace Plan_B
             this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox61.TabIndex = 71;
             this.pictureBox61.TabStop = false;
+            this.pictureBox61.Tag = "pieces";
             // 
             // pictureBox62
             // 
@@ -812,6 +866,7 @@ namespace Plan_B
             this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox62.TabIndex = 72;
             this.pictureBox62.TabStop = false;
+            this.pictureBox62.Tag = "pieces";
             // 
             // pictureBox63
             // 
@@ -823,6 +878,7 @@ namespace Plan_B
             this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox63.TabIndex = 73;
             this.pictureBox63.TabStop = false;
+            this.pictureBox63.Tag = "pieces";
             // 
             // pictureBox46
             // 
@@ -834,6 +890,7 @@ namespace Plan_B
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox46.TabIndex = 74;
             this.pictureBox46.TabStop = false;
+            this.pictureBox46.Tag = "pieces";
             // 
             // pictureBox12
             // 
@@ -845,6 +902,7 @@ namespace Plan_B
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 75;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Tag = "pieces";
             // 
             // pictureBox40
             // 
@@ -856,6 +914,7 @@ namespace Plan_B
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox40.TabIndex = 76;
             this.pictureBox40.TabStop = false;
+            this.pictureBox40.Tag = "pieces";
             // 
             // pictureBox47
             // 
@@ -867,6 +926,7 @@ namespace Plan_B
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox47.TabIndex = 77;
             this.pictureBox47.TabStop = false;
+            this.pictureBox47.Tag = "pieces";
             // 
             // pictureBox49
             // 
@@ -878,6 +938,7 @@ namespace Plan_B
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox49.TabIndex = 78;
             this.pictureBox49.TabStop = false;
+            this.pictureBox49.Tag = "pieces";
             // 
             // pictureBox64
             // 
@@ -889,6 +950,7 @@ namespace Plan_B
             this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox64.TabIndex = 79;
             this.pictureBox64.TabStop = false;
+            this.pictureBox64.Tag = "pieces";
             // 
             // pictureBox65
             // 
@@ -900,6 +962,7 @@ namespace Plan_B
             this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox65.TabIndex = 80;
             this.pictureBox65.TabStop = false;
+            this.pictureBox65.Tag = "pieces";
             // 
             // pictureBox66
             // 
@@ -911,6 +974,7 @@ namespace Plan_B
             this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox66.TabIndex = 81;
             this.pictureBox66.TabStop = false;
+            this.pictureBox66.Tag = "pieces";
             // 
             // pictureBox10
             // 
@@ -922,21 +986,21 @@ namespace Plan_B
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 82;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Tag = "pieces";
             // 
             // Hearts1
             // 
-            this.Hearts1.BackColor = System.Drawing.SystemColors.Control;
+            this.Hearts1.BackColor = System.Drawing.Color.Transparent;
             this.Hearts1.Location = new System.Drawing.Point(0, 0);
             this.Hearts1.Name = "Hearts1";
             this.Hearts1.Size = new System.Drawing.Size(84, 76);
             this.Hearts1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Hearts1.TabIndex = 1;
             this.Hearts1.TabStop = false;
-            this.Hearts1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Hearts2
             // 
-            this.Hearts2.BackColor = System.Drawing.SystemColors.Control;
+            this.Hearts2.BackColor = System.Drawing.Color.Transparent;
             this.Hearts2.Location = new System.Drawing.Point(80, -1);
             this.Hearts2.Name = "Hearts2";
             this.Hearts2.Size = new System.Drawing.Size(84, 76);
@@ -946,14 +1010,13 @@ namespace Plan_B
             // 
             // Hearts3
             // 
-            this.Hearts3.BackColor = System.Drawing.SystemColors.Control;
+            this.Hearts3.BackColor = System.Drawing.Color.Transparent;
             this.Hearts3.Location = new System.Drawing.Point(161, 0);
             this.Hearts3.Name = "Hearts3";
             this.Hearts3.Size = new System.Drawing.Size(84, 76);
             this.Hearts3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Hearts3.TabIndex = 84;
             this.Hearts3.TabStop = false;
-            this.Hearts3.Click += new System.EventHandler(this.pictureBox67_Click);
             // 
             // imageListHearts
             // 
@@ -962,6 +1025,10 @@ namespace Plan_B
             this.imageListHearts.TransparentColor = System.Drawing.Color.Black;
             this.imageListHearts.Images.SetKeyName(0, "Heart.png");
             this.imageListHearts.Images.SetKeyName(1, "Heart - Empty.png");
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // Game
             // 
@@ -1044,7 +1111,8 @@ namespace Plan_B
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
-            this.Load += new System.EventHandler(this.Game_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyd);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyu);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
@@ -1190,5 +1258,6 @@ namespace Plan_B
         private System.Windows.Forms.PictureBox Hearts2;
         private System.Windows.Forms.PictureBox Hearts3;
         private System.Windows.Forms.PictureBox Hearts1;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }

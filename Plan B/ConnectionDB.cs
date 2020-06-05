@@ -3,12 +3,12 @@ using Npgsql;
 
 namespace Plan_B
 {
-    public class ConecctionDB
+    public class ConnectionDB
     {
         private static string host = "127.0.0.1",
-            database = "Felidae",
+            database = "FinalProject",
             UserId = "postgres",
-            password = "gato";
+            password = "Alexito";
 
         private static string sConnection =
             $"Server={host};Port=5432;User Id={UserId};Password={password};Database={database};";

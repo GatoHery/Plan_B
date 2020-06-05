@@ -24,7 +24,7 @@ namespace Plan_B
             else
             {
                 //verificacion con la base de datos por si esta repetido
-                var dt = ConecctionDB.ExecuteQuery("SELECT Name " +
+                var dt = ConnectionDB.ExecuteQuery("SELECT Name " +
                                                              "FROM PLAYER");
 
                 foreach (DataRow dr in dt.Rows)
@@ -42,7 +42,7 @@ namespace Plan_B
                 //luego se inicia el juego
                 if (Continue == true)
                 {
-                    ConecctionDB.ExecuteNonQuery("INSERT INTO PLAYER(Name) " +
+                    ConnectionDB.ExecuteNonQuery("INSERT INTO PLAYER(Name) " +
                                                  $"VALUES('{txtName.Text}')");
                     Game game = new Game();
                     game.Show();
